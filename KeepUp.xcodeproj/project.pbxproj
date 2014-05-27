@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2816E449192F5EDE00D9E378 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2816E448192F5EDE00D9E378 /* GameKit.framework */; };
+		2816E45A193164D800D9E378 /* clouds.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2816E458193164D800D9E378 /* clouds.sks */; };
+		2816E45B193164D800D9E378 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E459193164D800D9E378 /* spark.png */; };
+		2816E45E1931A20700D9E378 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2816E45D1931A20700D9E378 /* SoundManager.m */; };
+		2816E46819328F4100D9E378 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E46719328F4100D9E378 /* background.png */; };
+		2816E46B1932A0C300D9E378 /* HorizontalBlackBarThorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E4691932A0C300D9E378 /* HorizontalBlackBarThorn.png */; };
+		2816E46C1932A0C300D9E378 /* VerticalBlackBarThorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E46A1932A0C300D9E378 /* VerticalBlackBarThorn.png */; };
+		2816E46E1932A49200D9E378 /* VerticalBlackBarStone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E46D1932A49200D9E378 /* VerticalBlackBarStone.png */; };
+		2816E4721932B42B00D9E378 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E4711932B42B00D9E378 /* background2.png */; };
+		2816E4741932C6C500D9E378 /* Caves.caf in Resources */ = {isa = PBXBuildFile; fileRef = 2816E4731932C6C500D9E378 /* Caves.caf */; };
+		2816E47619332E8100D9E378 /* HorizontalBlackBarStone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E47519332E8100D9E378 /* HorizontalBlackBarStone.png */; };
+		2816E4781933430D00D9E378 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2816E4771933430D00D9E378 /* iAd.framework */; };
 		281FC3C81928173200ABACEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3C71928173200ABACEE /* Foundation.framework */; };
 		281FC3CA1928173200ABACEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3C91928173200ABACEE /* CoreGraphics.framework */; };
 		281FC3CC1928173200ABACEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3CB1928173200ABACEE /* UIKit.framework */; };
@@ -24,6 +36,10 @@
 		281FC3F01928173200ABACEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3CB1928173200ABACEE /* UIKit.framework */; };
 		281FC3F81928173300ABACEE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 281FC3F61928173300ABACEE /* InfoPlist.strings */; };
 		281FC3FA1928173300ABACEE /* KeepUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 281FC3F91928173300ABACEE /* KeepUpTests.m */; };
+		281FC405192817E400ABACEE /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 281FC404192817E400ABACEE /* GameLogic.m */; };
+		281FC40719281A2000ABACEE /* BlackBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 281FC40619281A2000ABACEE /* BlackBar.png */; };
+		28683161192ED2D30056623F /* blueBall.png in Resources */ = {isa = PBXBuildFile; fileRef = 28683160192ED2D30056623F /* blueBall.png */; };
+		28683163192EDC5D0056623F /* VerticalBlackBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 28683162192EDC5D0056623F /* VerticalBlackBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2816E448192F5EDE00D9E378 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		2816E458193164D800D9E378 /* clouds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = clouds.sks; sourceTree = "<group>"; };
+		2816E459193164D800D9E378 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		2816E45C1931A20700D9E378 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		2816E45D1931A20700D9E378 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		2816E46719328F4100D9E378 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		2816E4691932A0C300D9E378 /* HorizontalBlackBarThorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HorizontalBlackBarThorn.png; sourceTree = "<group>"; };
+		2816E46A1932A0C300D9E378 /* VerticalBlackBarThorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerticalBlackBarThorn.png; sourceTree = "<group>"; };
+		2816E46D1932A49200D9E378 /* VerticalBlackBarStone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerticalBlackBarStone.png; sourceTree = "<group>"; };
+		2816E4711932B42B00D9E378 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
+		2816E4731932C6C500D9E378 /* Caves.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Caves.caf; sourceTree = "<group>"; };
+		2816E47519332E8100D9E378 /* HorizontalBlackBarStone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HorizontalBlackBarStone.png; sourceTree = "<group>"; };
+		2816E4771933430D00D9E378 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		281FC3C41928173200ABACEE /* KeepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281FC3C71928173200ABACEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		281FC3C91928173200ABACEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +89,11 @@
 		281FC3F51928173300ABACEE /* KeepUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeepUpTests-Info.plist"; sourceTree = "<group>"; };
 		281FC3F71928173300ABACEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		281FC3F91928173300ABACEE /* KeepUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeepUpTests.m; sourceTree = "<group>"; };
+		281FC403192817E400ABACEE /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
+		281FC404192817E400ABACEE /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
+		281FC40619281A2000ABACEE /* BlackBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBar.png; sourceTree = "<group>"; };
+		28683160192ED2D30056623F /* blueBall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueBall.png; sourceTree = "<group>"; };
+		28683162192EDC5D0056623F /* VerticalBlackBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerticalBlackBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +101,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2816E4781933430D00D9E378 /* iAd.framework in Frameworks */,
 				281FC3CA1928173200ABACEE /* CoreGraphics.framework in Frameworks */,
 				281FC3CC1928173200ABACEE /* UIKit.framework in Frameworks */,
 				281FC3CE1928173200ABACEE /* SpriteKit.framework in Frameworks */,
 				281FC3C81928173200ABACEE /* Foundation.framework in Frameworks */,
+				2816E449192F5EDE00D9E378 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +126,8 @@
 		281FC3BB1928173200ABACEE = {
 			isa = PBXGroup;
 			children = (
+				2816E458193164D800D9E378 /* clouds.sks */,
+				2816E459193164D800D9E378 /* spark.png */,
 				281FC3CF1928173200ABACEE /* KeepUp */,
 				281FC3F31928173300ABACEE /* KeepUpTests */,
 				281FC3C61928173200ABACEE /* Frameworks */,
@@ -109,6 +147,8 @@
 		281FC3C61928173200ABACEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2816E4771933430D00D9E378 /* iAd.framework */,
+				2816E448192F5EDE00D9E378 /* GameKit.framework */,
 				281FC3C71928173200ABACEE /* Foundation.framework */,
 				281FC3C91928173200ABACEE /* CoreGraphics.framework */,
 				281FC3CB1928173200ABACEE /* UIKit.framework */,
@@ -128,7 +168,21 @@
 				281FC3DF1928173200ABACEE /* ViewController.m */,
 				281FC3E11928173200ABACEE /* MyScene.h */,
 				281FC3E21928173200ABACEE /* MyScene.m */,
+				281FC403192817E400ABACEE /* GameLogic.h */,
+				281FC404192817E400ABACEE /* GameLogic.m */,
+				2816E45C1931A20700D9E378 /* SoundManager.h */,
+				2816E45D1931A20700D9E378 /* SoundManager.m */,
+				281FC40619281A2000ABACEE /* BlackBar.png */,
+				28683162192EDC5D0056623F /* VerticalBlackBar.png */,
+				2816E4691932A0C300D9E378 /* HorizontalBlackBarThorn.png */,
+				2816E47519332E8100D9E378 /* HorizontalBlackBarStone.png */,
+				2816E46A1932A0C300D9E378 /* VerticalBlackBarThorn.png */,
+				2816E46D1932A49200D9E378 /* VerticalBlackBarStone.png */,
+				28683160192ED2D30056623F /* blueBall.png */,
 				281FC3E41928173200ABACEE /* Spaceship.png */,
+				2816E46719328F4100D9E378 /* background.png */,
+				2816E4711932B42B00D9E378 /* background2.png */,
+				2816E4731932C6C500D9E378 /* Caves.caf */,
 				281FC3E61928173200ABACEE /* Images.xcassets */,
 				281FC3D01928173200ABACEE /* Supporting Files */,
 			);
@@ -211,6 +265,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "James Is a Baller";
 				TargetAttributes = {
+					281FC3C31928173200ABACEE = {
+						DevelopmentTeam = 3UZL7565KP;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					281FC3EB1928173200ABACEE = {
 						TestTargetID = 281FC3C31928173200ABACEE;
 					};
@@ -240,10 +302,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2816E45B193164D800D9E378 /* spark.png in Resources */,
+				28683161192ED2D30056623F /* blueBall.png in Resources */,
 				281FC3D41928173200ABACEE /* InfoPlist.strings in Resources */,
+				2816E47619332E8100D9E378 /* HorizontalBlackBarStone.png in Resources */,
+				2816E4741932C6C500D9E378 /* Caves.caf in Resources */,
 				281FC3E71928173200ABACEE /* Images.xcassets in Resources */,
+				2816E4721932B42B00D9E378 /* background2.png in Resources */,
+				2816E45A193164D800D9E378 /* clouds.sks in Resources */,
+				2816E46C1932A0C300D9E378 /* VerticalBlackBarThorn.png in Resources */,
+				281FC40719281A2000ABACEE /* BlackBar.png in Resources */,
+				2816E46B1932A0C300D9E378 /* HorizontalBlackBarThorn.png in Resources */,
+				2816E46819328F4100D9E378 /* background.png in Resources */,
 				281FC3E51928173200ABACEE /* Spaceship.png in Resources */,
+				28683163192EDC5D0056623F /* VerticalBlackBar.png in Resources */,
 				281FC3DD1928173200ABACEE /* Main.storyboard in Resources */,
+				2816E46E1932A49200D9E378 /* VerticalBlackBarStone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +338,8 @@
 			files = (
 				281FC3E31928173200ABACEE /* MyScene.m in Sources */,
 				281FC3E01928173200ABACEE /* ViewController.m in Sources */,
+				281FC405192817E400ABACEE /* GameLogic.m in Sources */,
+				2816E45E1931A20700D9E378 /* SoundManager.m in Sources */,
 				281FC3DA1928173200ABACEE /* AppDelegate.m in Sources */,
 				281FC3D61928173200ABACEE /* main.m in Sources */,
 			);
@@ -347,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -379,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -390,10 +466,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeepUp/KeepUp-Prefix.pch";
 				INFOPLIST_FILE = "KeepUp/KeepUp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -404,10 +483,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeepUp/KeepUp-Prefix.pch";
 				INFOPLIST_FILE = "KeepUp/KeepUp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,6 +554,7 @@
 				281FC3FF1928173300ABACEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		281FC4001928173300ABACEE /* Build configuration list for PBXNativeTarget "KeepUpTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +563,7 @@
 				281FC4021928173300ABACEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
