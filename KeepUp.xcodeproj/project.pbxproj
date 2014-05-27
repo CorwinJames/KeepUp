@@ -21,7 +21,6 @@
 		2816E4781933430D00D9E378 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2816E4771933430D00D9E378 /* iAd.framework */; };
 		2816E47A1934B1E400D9E378 /* backgroundThorns.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E4791934B1E400D9E378 /* backgroundThorns.png */; };
 		2816E47C19354C9000D9E378 /* rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2816E47B19354C9000D9E378 /* rain.sks */; };
-		2816E48019354D7E00D9E378 /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2816E47E19354D7E00D9E378 /* bokeh.png */; };
 		281FC3C81928173200ABACEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3C71928173200ABACEE /* Foundation.framework */; };
 		281FC3CA1928173200ABACEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3C91928173200ABACEE /* CoreGraphics.framework */; };
 		281FC3CC1928173200ABACEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281FC3CB1928173200ABACEE /* UIKit.framework */; };
@@ -71,7 +70,6 @@
 		2816E4771933430D00D9E378 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2816E4791934B1E400D9E378 /* backgroundThorns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundThorns.png; sourceTree = "<group>"; };
 		2816E47B19354C9000D9E378 /* rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = rain.sks; sourceTree = "<group>"; };
-		2816E47E19354D7E00D9E378 /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
 		281FC3C41928173200ABACEE /* KeepUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281FC3C71928173200ABACEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		281FC3C91928173200ABACEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,7 +132,6 @@
 			children = (
 				2816E458193164D800D9E378 /* clouds.sks */,
 				2816E47B19354C9000D9E378 /* rain.sks */,
-				2816E47E19354D7E00D9E378 /* bokeh.png */,
 				2816E459193164D800D9E378 /* spark.png */,
 				281FC3CF1928173200ABACEE /* KeepUp */,
 				281FC3F31928173300ABACEE /* KeepUpTests */,
@@ -315,7 +312,6 @@
 				28683161192ED2D30056623F /* blueBall.png in Resources */,
 				281FC3D41928173200ABACEE /* InfoPlist.strings in Resources */,
 				2816E47619332E8100D9E378 /* HorizontalBlackBarStone.png in Resources */,
-				2816E48019354D7E00D9E378 /* bokeh.png in Resources */,
 				2816E4741932C6C500D9E378 /* Caves.caf in Resources */,
 				281FC3E71928173200ABACEE /* Images.xcassets in Resources */,
 				2816E4721932B42B00D9E378 /* background2.png in Resources */,
