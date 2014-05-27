@@ -23,7 +23,9 @@ NSTimer *verticalBarCreateTimer;
 
 SKAction *scrollDownThenRemove;
 SKAction *scrollRightThenRemove;
+SKAction *scrollUpThenRemove;
 SKAction *scrollDown;
+SKAction *scrollUp;
 SKAction *scrollUpTopBar;
 SKAction *scrollDownTopBar;
 SKAction *scrollUpBottomBar;
@@ -43,6 +45,8 @@ SKEmitterNode *backgroundParticles;
 
 SKSpriteNode *background;
 SKSpriteNode *background2;
+SKSpriteNode *background3;
+SKSpriteNode *background4;
 
 int distanceBarsApart;
 int distanceVerticalBarsApart;
@@ -66,17 +70,29 @@ BOOL topBarUp;
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
-        self.backgroundColor = [SKColor blueColor];
-        background = [SKSpriteNode spriteNodeWithImageNamed:@"background2"];
-        background2 = [SKSpriteNode spriteNodeWithImageNamed:@"background2"];
-        background.position = CGPointMake(self.size.width/2, self.size.height/2);
-        background2.position = CGPointMake(self.size.width/2, self.size.height+background2.frame.size.height/2 - 2);
+        self.backgroundColor = [SKColor orangeColor];
+        background = [SKSpriteNode spriteNodeWithImageNamed:@"backgroundThorns"];
+        background2 = [SKSpriteNode spriteNodeWithImageNamed:@"backgroundThorns"];
+        background3 = [SKSpriteNode spriteNodeWithImageNamed:@"backgroundThorns"];
+        background4 = [SKSpriteNode spriteNodeWithImageNamed:@"backgroundThorns"];
+
+        background.scale = 1.2;
+        background2.scale = 1.2;
+        background3.scale = 1.2;
+        background4.scale = 1.2;
+
+        background.position = CGPointMake(background.frame.size.width/2, background.frame.size.height/2);
+        background2.position = CGPointMake(background.frame.size.width/2, background.frame.size.height+background.frame.size.height/2);
+        background3.position = CGPointMake(-background.frame.size.width/2, background.frame.size.height/2);
+        background4.position = CGPointMake(-background4.frame.size.width/2, background.frame.size.height+background.frame.size.height/2);
+        
+
         [self addChild:background];
         [self addChild:background2];
         
         backgroundParticles = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"clouds" ofType:@"sks"]];
-        backgroundParticles.position = CGPointMake(self.size.width-30, 110);
-        backgroundParticles.scale = 3;
+        backgroundParticles.position = CGPointMake(self.size.width, self.size.height);
+        backgroundParticles.scale = 2;
         backgroundParticles.zPosition = -1;
         [self addChild:backgroundParticles];
         
@@ -151,13 +167,16 @@ BOOL topBarUp;
     
     float leftBarRandom = arc4random_uniform(self.size.width - distanceBarsApart) - leftBar.frame.size.width/2;
     float rightBarRandom = leftBarRandom + distanceBarsApart + leftBar.frame.size.width/2 + rightBar.frame.size.width/2;
-    
-    NSLog(@"Left bar X: %f",leftBarRandom);
-    NSLog(@"Right bar X: %f",rightBarRandom);
 
-    
+    if (scoreValue > 50 && scoreValue < 75) {
+        NSLog(@"This is being called, so scoreValue is over 100 and less than 200");
+        leftBar.position = CGPointMake(leftBarRandom, -leftBar.frame.size.height/2);
+        rightBar.position = CGPointMake(rightBarRandom, -rightBar.frame.size.height/2);
+    } else {
     leftBar.position = CGPointMake(leftBarRandom, self.size.height+leftBar.frame.size.height/2);
     rightBar.position = CGPointMake(rightBarRandom, self.size.height+rightBar.frame.size.height/2);
+    
+    }
     
     [self addChild:leftBar];
     [self addChild:rightBar];
@@ -223,11 +242,19 @@ BOOL topBarUp;
 }
 -(void)moveHorizontalBars:(CGSize)size{
     scrollDown = [SKAction moveToY:-leftBar.frame.size.height/2 duration:scrollTime-scoreValue*.002];
-    scrollDownThenRemove = [SKAction sequence:@[scrollDown, removeFromScene]];
+    scrollUp = [SKAction moveToY:self.size.height+leftBar.frame.size.height/2 duration:scrollTime-scoreValue*.002];
     
+    scrollUpThenRemove = [SKAction sequence:@[scrollUp, removeFromScene]];
+    scrollDownThenRemove = [SKAction sequence:@[scrollDown, removeFromScene]];
+                          
+                          
+    if (scoreValue > 50 && scoreValue < 75) {
+        [leftBar runAction:scrollUpThenRemove];
+        [rightBar runAction:scrollUpThenRemove];
+    } else {
     [leftBar runAction:scrollDownThenRemove];
     [rightBar runAction:scrollDownThenRemove];
-   
+    }
 }
 -(void)moveVerticalBars:(CGSize)size{
     if (scoreValue > 205) {
@@ -289,10 +316,7 @@ BOOL topBarUp;
     [self resetVariables];
     
     //[self moveBackground:self.size];
-    highScoreValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"HighScore"];
-
-    [highScoreLabel setText:[NSString stringWithFormat:@"%d",highScoreValue]];
-    NSLog(@"%d",highScoreValue);
+    
 
 
     
@@ -354,7 +378,11 @@ BOOL topBarUp;
     NSLog(@"Game Over");
     gameIsRunning = NO;
     [self stopMusic];
+    
     highScoreValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"HighScore"];
+    
+    [highScoreLabel setText:[NSString stringWithFormat:@"%d",highScoreValue]];
+    NSLog(@"%d",highScoreValue);
     if (highScoreValue < scoreValue) {
         [[NSUserDefaults standardUserDefaults] setInteger:scoreValue forKey:@"HighScore"];
     }
@@ -369,6 +397,8 @@ BOOL topBarUp;
     [self addChild:backgroundParticles];
     [self addChild:background];
     [self addChild:background2];
+    [self addChild:background3];
+    [self addChild:background4];
     [self addChild:score];
     [self addChild:highScoreLabel];
 
@@ -379,15 +409,40 @@ BOOL topBarUp;
     [score setText:[NSString stringWithFormat:@"%d",scoreValue]];
     
     if (gameIsRunning) {
-        background.position = CGPointMake(background.position.x, background.position.y-.5);
-        background2.position = CGPointMake(background2.position.x, background2.position.y-.5);
+        background.position = CGPointMake(background.position.x+.25, background.position.y-.5);
+        background2.position = CGPointMake(background2.position.x+.25, background2.position.y-.5);
+        background3.position = CGPointMake(background3.position.x+.25, background3.position.y-.5);
+        background4.position = CGPointMake(background4.position.x+.25, background4.position.y-.5);
 
 
         if (background.position.y < -background.frame.size.height/2) {
-            background.position = CGPointMake(self.size.width/2, self.size.height+background.frame.size.height/2 - 4);
+            background.position = CGPointMake(background.position.x, background.size.height+background.size.height/2);
         }
         if (background2.position.y < -background2.frame.size.height/2) {
-            background2.position = CGPointMake(self.size.width/2, self.size.height+background2.frame.size.height/2 - 2);
+            background2.position = CGPointMake(background2.position.x, background.size.height+background.size.height/2);
+        }
+        if (background3.position.y < -background3.frame.size.height/2) {
+            background3.position = CGPointMake(background3.position.x, background.size.height+background.size.height/2);
+        }
+        
+        if (background4.position.y < -background4.frame.size.height/2) {
+            background4.position = CGPointMake(background4.position.x, background.size.height+background.size.height/2);
+        }
+        
+        
+        
+        
+        if (background.position.x > self.size.width+background.frame.size.width/2) {
+            background.position = CGPointMake(self.size.width-background.frame.size.width-background.frame.size.width/2, background.position.y);
+        }
+        if (background2.position.x > self.size.width+background2.frame.size.width/2) {
+            background2.position = CGPointMake(self.size.width-background.frame.size.width-background.frame.size.width/2, background2.position.y);
+        }
+        if (background3.position.x > self.size.width+background3.frame.size.width/2) {
+            background3.position = CGPointMake(self.size.width-background.frame.size.width-background.frame.size.width/2, background3.position.y);
+        }
+        if (background4.position.x > self.size.width+background4.frame.size.width/2) {
+            background4.position = CGPointMake(self.size.width-background.frame.size.width-background.frame.size.width/2, background4.position.y);
         }
     }
    
